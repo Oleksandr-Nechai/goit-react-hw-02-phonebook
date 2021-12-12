@@ -50,11 +50,11 @@ class App extends Component {
     const visibleContacts = this.getVisibleContacts();
 
     return (
-      <div>
-        <h1>Phonebook</h1>
-        <ContactForm onSubmit={this.formSubmitHandler} />
+      <div className="section">
+        <h1 className="title">Phonebook</h1>
+        <ContactForm onSubmitContact={this.formSubmitHandler} />
 
-        <h2>Contacts</h2>
+        <h2 className="title">Contacts</h2>
         <Filter value={this.state.filter} onChange={this.changeFilter} />
         <ContactList
           contacts={visibleContacts}

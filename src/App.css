@@ -122,3 +122,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.title {
+  font-size: 42px;
+  color: blue;
+  font-weight: 400;
+}
+.section {
+  width: 600px;
+  text-align: center;
+  margin: 30px auto;
+}
+body {
+  background-image: url(./image/aaa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -3,9 +3,9 @@ import PropTypes from "prop-types"
 
 function ContactList({ contacts,onRemoveContact }) {
     const contact = contacts.map(({id,name,number}) => (
-                <li key={id}>
+        <li key={id} className={styles.list }>
             <span>{name + ` : ` + number}</span>
-            <button type="button" name="delte" onClick={() => onRemoveContact(id)}>Delete</button>
+            <button className={styles.button } type="button" name="delte" onClick={() => onRemoveContact(id)}>Delete</button>
                 </li>
             ))
     return (
