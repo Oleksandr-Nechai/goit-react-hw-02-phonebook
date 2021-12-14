@@ -15,14 +15,14 @@ class App extends Component {
     ],
     filter: "",
   };
-  serchName = (value) => {
+  searchName = (value) => {
     return this.state.contacts.find(
       (item) => item.name.toUpperCase() === value.toUpperCase()
     );
   };
   formSubmitHandler = (data) => {
     const { name } = data;
-    if (this.serchName(name)) {
+    if (this.searchName(name)) {
       alert(`${name} is already in contacts`);
     } else {
       const contact = { ...data, id: nanoid() };
@@ -34,7 +34,9 @@ class App extends Component {
   };
   getVisibleContacts = () => {
     const { contacts, filter } = this.state;
-
+    if (!filter) {
+      return contacts;
+    }
     return contacts.filter((contacts) =>
       contacts.name.toLowerCase().includes(filter.toLowerCase())
     );
